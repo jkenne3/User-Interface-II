@@ -30,6 +30,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+HTML {
+    font-size: 62.5%;
+}
+
 body {
 	line-height: 1;
 }
@@ -56,21 +60,25 @@ table {
 h1 {
     color: rgb(48, 132, 228);
     font-size: 50px;
+    width: 25%;
+    margin: 10px;
+    padding: 10px;
 }
 
 header nav {
     display: flex;
     flex-direction: row;
+    width: 50%;
 }
 
- header nav a{
-    width: 10%;
+ a{
+    width: 15%;
     border: 2px solid transparent;
     padding: 10px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
     border-radius: 10px;
+    text-decoration: none;
     color: white;
     background: rgb(82, 116, 209);
 }
@@ -88,26 +96,41 @@ header nav a:hover{
     width: 85%;
     height: auto;
     margin: 0px;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row; 
     justify-content: space-between;
     align-items: flex-start;
     background-color: white;
 }
  
 #main-image {
-    width: 500px;
+    width: 50%;
     padding: 5px;
     margin: 10px 10px 10px 10px;
     border-radius: 15px;
 }
 
+h2 {
+    color:rgb(0, 0, 0);
+    font-size: 25px;
+}
 #section-one {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 50px;
 }
+
+
+#journey-text {
+    font-size: 20px;
+    margin: 50px;
+  
+    color: green;
+}
+
+
 
 .container-two {
     display: flex;
@@ -150,14 +173,36 @@ img.hobby-image {
     border-radius: 15px;
 }
 
-footer {
+.footer{
     display: flex;
     width: 100%;
-    height: auto;
     margin: 100px;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
+    justify-content: center;
+  
+}
+
+.footer nav a {
+    width: 100%;
+    border: 2px solid green;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: white;
+    background: rgb(82, 116, 209);
+}
+
+@media (max-width: 768px){
+    #main-image {
+        width: 33%;
+        padding: 5px;
+        margin: 10px 10px 10px 10px;
+        
+    }
+    #section-one {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 2rem;
+        
+    }
 }
