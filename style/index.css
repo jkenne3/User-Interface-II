@@ -83,7 +83,7 @@ table {
 
 h1 {
     color: rgb(48, 132, 228);
-    font-size: 50px;
+    font-size: 5rem;
     width: 100%;
     margin: 0 auto;
     padding: 3rem;
@@ -227,7 +227,7 @@ img.hobby-image {
     }
     
     #main-image {
-        width: 20rem;
+        width: 25rem;
         padding: 10px;
         margin: 10px 10px 10px 10px;
     }
