@@ -55,34 +55,56 @@ table {
 
 /* ======= Jim code start ======= */
 
+.container {
+    display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.container-two {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.header {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+}
 
 
 h1 {
     color: rgb(48, 132, 228);
     font-size: 50px;
-    width: 25%;
-    margin: 10px;
-    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem;
 }
 
-header nav {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-}
 
- a{
+ nav a{
     width: 15%;
+    font-size: 1.5rem;
     border: 2px solid transparent;
     padding: 10px;
-    margin: 0 auto;
+    margin: 10px;
     text-align: center;
     border-radius: 10px;
     text-decoration: none;
     color: white;
     background: rgb(82, 116, 209);
 }
-header nav a:hover{
+
+
+nav a:hover{
     background: white;
     color: rgb(82, 116, 209);
     border-style: solid;
@@ -91,7 +113,7 @@ header nav a:hover{
 }
 
 
-.container-one {
+.main-section {
     display: flex;
     width: 85%;
     height: auto;
@@ -102,18 +124,22 @@ header nav a:hover{
     background-color: white;
 }
  
-#main-image {
+
+.main-image {
+    display: flex;
     width: 50%;
+
+}
+
+#main-image {
+    width: 100%;
     padding: 5px;
     margin: 10px 10px 10px 10px;
     border-radius: 15px;
 }
 
-h2 {
-    color:rgb(0, 0, 0);
-    font-size: 25px;
-}
-#section-one {
+
+.main-text {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -123,34 +149,37 @@ h2 {
 }
 
 
+h2 {
+    color:rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+
 #journey-text {
-    font-size: 20px;
-    margin: 50px;
-  
+    width: 100%;
+    font-size: 2rem;
+    margin: 5px 5px 5px 5px;
     color: green;
 }
 
 
-
-.container-two {
+.section-two {
     display: flex;
-    width: 85%;
+    width: 100%;
     height: auto;
     margin: 0px;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     background-color: white;
 }
 
-.container-three {
+.section-three {
     display: flex;
-    width: 85%;
+    width: 100%;
     height: auto;
     margin: 0px;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     background-color: white;
@@ -158,25 +187,22 @@ h2 {
 
  .hobby{
      display: flex;
-     width: 100px;
+     width: 25%;
      margin: 30px;
-     flex-wrap: wrap;
      flex-direction: column;
-     justify-content: space-evenly;
-     align-items: center;
  }
 img.hobby-image {
-    max-width: 200px;
-    overflow: hidden;
+    width: 100%;
     height: auto;
     border-style: solid;
     border-radius: 15px;
+
 }
 
 .footer{
     display: flex;
     width: 100%;
-    margin: 100px;
+    margin: 10%;
     justify-content: center;
   
 }
@@ -191,18 +217,47 @@ img.hobby-image {
     background: rgb(82, 116, 209);
 }
 
+
+/* ================================================
+================= break point for tablets ======= */
+
 @media (max-width: 768px){
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    #main-image {
+        width: 20rem;
+        padding: 10px;
+        margin: 10px 10px 10px 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    #journey-text {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+    }
+    img.hobby-image {
+        width: 100%;
+
+    }
+}
+
+
+
+
+
+
+/* ================================================
+================= break point for mobile ======= */
+
+@media (max-width: 375px){
     #main-image {
         width: 33%;
         padding: 5px;
         margin: 10px 10px 10px 10px;
-        
     }
-    #section-one {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        font-size: 2rem;
-        
-    }
-}
